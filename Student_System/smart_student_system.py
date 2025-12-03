@@ -362,9 +362,7 @@ def ai_chat(prompt):
         response, _ = model.chat(tokenizer, prompt, history=[], max_new_tokens=512)
         print(f"AI Response: {response}")
 
-        save_to_training_data(prompt, response)
-       
-        # train_lora(single_step=True) 
+        save_to_training_data(prompt, response) 
         
         return response
     except Exception as e:
